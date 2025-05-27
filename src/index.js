@@ -44,11 +44,12 @@ app.listen(3000, async () => {
     // const firstDoc = await model.findById('67f531392ff463fc7a1dcc65');
     // firstDoc.userEmail = "abc@gmail.com";
     // await firstDoc.save();
-    // console.log(firstDoc.contentWithEmail);
+    // // console.log(firstDoc.contentWithEmail);
 
-    const allTweet = await tweetRepo.getAll(0, 8);
-    console.log(allTweet[0].contentWithEmail);
+    // const allTweet = await tweetRepo.getAll(0, 8);
+    // console.log(allTweet[0].contentWithEmail);
     
-
+    const tweet = await tweetRepo.create({ content: "to check the hook" });
+    console.log(tweet);
 
 })
