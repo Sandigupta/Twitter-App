@@ -34,11 +34,21 @@ app.listen(3000, async () => {
     // console.log(tweet);
 
 
-    const tweet = await tweetRepo.getWithComments('6831a34bede5082ed9fbcb44');
-    console.log(tweet);
+    // const tweet = await tweetRepo.getWithComments('6831a34bede5082ed9fbcb44');
+    // console.log(tweet);
 
     // const data = await model.find({});
     // console.log(data);
+    
+
+    // const firstDoc = await model.findById('67f531392ff463fc7a1dcc65');
+    // firstDoc.userEmail = "abc@gmail.com";
+    // await firstDoc.save();
+    // console.log(firstDoc.contentWithEmail);
+
+    const allTweet = await tweetRepo.getAll(0, 8);
+    console.log(allTweet[0].contentWithEmail);
+    
 
 
 })
